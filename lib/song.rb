@@ -14,9 +14,9 @@ class Song
   end
 
   def self.new_by_name
-    
-    song = Song.new_by_name("The Middle")
-    song.name
+    self.all.each{|person| puts "#{person.name}"}
+    # song = Song.new_by_name("The Middle")
+    # song.name
   def save
     self.class.all << self
   end
