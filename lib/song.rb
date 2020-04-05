@@ -7,16 +7,23 @@ class Song
   end
 
   def self.create(song)
-    song = Song.create
-    if !Song.all.include?(song)
-      @@all << song
-    end
+    music = self.new
+    music.song = music
+    # if !Song.all.include?(song)
+      @@all << music
+    # end
   end
 
   def self.new_by_name
-    self.all.each{|person| puts "#{person.name}"}
+    self.all.each{|person| return "#{person.name}"}
     # song = Song.new_by_name("The Middle")
     # song.name
+  end
+end
+
+  def self.create_by_name
+    
+
   def save
     self.class.all << self
   end
